@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "me.jessyan.mvpart.demo"
+        applicationId "me.jiatao.funny"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -61,12 +61,13 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
     compile rootProject.ext.dependencies["paginate"]
     //art
-    compile 'me.jessyan:art:1.0.2'
     //test
     testCompile rootProject.ext.dependencies["junit"]
     debugCompile rootProject.ext.dependencies["canary-debug"]
     releaseCompile rootProject.ext.dependencies["canary-release"]
     testCompile rootProject.ext.dependencies["canary-release"]
+    compile 'me.jessyan:art:1.0.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
 }
 
 

@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">#ffffff</item> <!--  敲定颜色-->
+        <item name="android:textSize">22sp</item> <!--  搞掂字体大小-->
+    </style>
 </resources>
