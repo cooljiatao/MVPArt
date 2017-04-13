@@ -57,17 +57,21 @@ dependencies {
     //tools
     provided rootProject.ext.dependencies["javax.annotation"]
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+
     //view
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
     compile rootProject.ext.dependencies["paginate"]
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
+
     //art
+    //compile 'me.jessyan:art:1.0.2'
+    compile project(':art')
+
     //test
     testCompile rootProject.ext.dependencies["junit"]
     debugCompile rootProject.ext.dependencies["canary-debug"]
     releaseCompile rootProject.ext.dependencies["canary-release"]
     testCompile rootProject.ext.dependencies["canary-release"]
-    compile 'me.jessyan:art:1.0.2'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
 }
 
 

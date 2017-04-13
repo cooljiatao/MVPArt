@@ -5,6 +5,6 @@ package me.jiatao.funny.mvp.model.api;
  * contact with jess.yan.effort@gmail.com
  */
 public interface Api {
-    String APP_DOMAIN = "https://api.github.com";
+    String APP_DOMAIN = "http://c.3g.163.com/";
     String RequestSuccess = "0";
 }

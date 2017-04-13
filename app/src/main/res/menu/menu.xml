@@ -6,22 +6,21 @@
             android:id="@+id/nav_qiushi"
             android:checked="true"
             android:icon="@mipmap/ic_nav_qiushi"
-            android:title="糗事" />
+            android:title="@string/nav_qiushi" />
         <item
             android:id="@+id/nav_photos"
-            android:checked="true"
             android:icon="@mipmap/ic_nav_picture"
-            android:title="图片" />
+            android:title="@string/nav_photos" />
 
         <item
             android:id="@+id/nav_news"
             android:icon="@mipmap/ic_nav_news"
-            android:title="新闻" />
+            android:title="@string/nav_news" />
 
         <item
             android:id="@+id/nav_videos"
             android:icon="@mipmap/ic_nav_video"
-            android:title="视频" />
+            android:title="@string/nav_videos" />
     </group>
 
     <group android:checkableBehavior="none">
@@ -30,6 +29,6 @@
             android:id="@+id/nav_setting"
             android:checkable="false"
             android:icon="@mipmap/ic_nav_setting"
-            android:title="设置" />
+            android:title="@string/nav_setting" />
     </group>
 </menu>

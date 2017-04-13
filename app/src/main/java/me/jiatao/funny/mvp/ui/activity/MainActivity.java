@@ -1,8 +1,5 @@
 package me.jiatao.funny.mvp.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
-
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -12,14 +9,15 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.jiatao.funny.R;
+import me.jiatao.funny.mvp.ui.fragment.photo.PhotoMainFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -64,32 +62,28 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout.addDrawerListener(mDrawerToggle);
 
         //设置导航栏的监听
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-                Snackbar.make(mDrawerLayout, menuItem.getTitle() + " pressed", Snackbar.LENGTH_LONG).show();
-                if (menuItem.getItemId() != R.id.nav_setting) {
-                    menuItem.setChecked(true);
-                }
-
-                switch (menuItem.getItemId()) {
-                    case R.id.nav_qiushi:
-                        toolbar.setTitle("糗事");
-                        break;
-                    case R.id.nav_photos:
-                        toolbar.setTitle("图片");
-//                        replaceFragment(R.id.fl_container, new PhotoMainFragment(), "photo");
-                        break;
-                }
-
-
-                mDrawerLayout.closeDrawers();
-                return true;
+        navigationView.setNavigationItemSelectedListener(menuItem -> {
+            Snackbar.make(mDrawerLayout, menuItem.getTitle() + " pressed", Snackbar.LENGTH_LONG).show();
+            if (menuItem.getItemId() != R.id.nav_setting) {
+                menuItem.setChecked(true);
             }
+
+            switch (menuItem.getItemId()) {
+                case R.id.nav_qiushi:
+                    toolbar.setTitle(R.string.nav_qiushi);
+                    break;
+                case R.id.nav_photos:
+                    toolbar.setTitle(R.string.nav_photos);
+//                        replaceFragment(R.id.fl_container, new PhotoMainFragment(), "photo");
+                    break;
+            }
+
+
+            mDrawerLayout.closeDrawers();
+            return true;
         });
 
-
-//        replaceFragment(R.id.fl_container, new PhotoMainFragment(), "photo");
+        replaceFragment(R.id.fl_container, new PhotoMainFragment(), "photo");
     }
 
 

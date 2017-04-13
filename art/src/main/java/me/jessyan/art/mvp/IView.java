@@ -19,6 +19,16 @@ public interface IView {
      */
     void hideLoading();
 
+//    /**
+//     *加载更多
+//     */
+//    void startLoadMore();
+//
+//    /**
+//     *加载更多完成
+//     */
+//    void endLoadMore();
+
     /**
      * 显示信息
      */
@@ -27,6 +37,7 @@ public interface IView {
 
     /**
      * 处理消息,这里面和handler的原理一样,通过swith(what),做不同的操作
+     *
      * @param message
      */
     void handleMessage(Message message);
